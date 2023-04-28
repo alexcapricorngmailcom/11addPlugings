@@ -1,0 +1,300 @@
+@import "_options"
+@import "_defaults"
+@import "_fonts"
+
+html
+    font-family: HelveticaNeue
+    font-size: 15px
+    font-weight: 400
+    font-style: normal
+    background-color: #ffffff
+    color: #ffffff
+
+.container
+    width: 100vw
+    max-width: 67em
+    margin: 0 auto
+    padding: 0 10px
+
+.btn
+    display: inline-block
+    text-align: center
+    border: 1px solid #959595
+    border-radius: 6px
+    transition: 0.2s
+
+section:nth-child(even)
+    background-color: $sectionsBackground
+    border-bottom: 1px solid #ebedf0
+
+section:nth-child(odd)
+    background-color: #ffffff
+    border-bottom: 1px solid #ebedf0
+
+section:first-child
+    background-color: #000000
+    background-image: linear-gradient(to left, #000, rgba(255,255,255, .2), #000)
+    box-shadow: inset 0 150px 150px 0 #000
+    border: none
+
+section:last-child
+    background-color: $accentColor
+    border: none
+
+.header 
+    position: absolute
+    top: 3em
+    left: 0
+    width: 100%
+
+.nav
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &-logo
+        font-size: 1.4em
+        font-weight: 700
+        &:hover, &:focus
+            color: $accentColor
+    &-mobile
+        &-btn, &-checkbox 
+            display: none
+        &-btn
+            padding: 0.7em 1em
+        &-btn:hover, &:focus
+            background-color: $accentColor
+        &-checkbox:checked + .nav-list
+            display: inline-flex
+    &-list
+        display: flex
+        li + li
+            margin-left: 1.5em
+        &-link
+            &:hover, &:focus
+                color: $accentColor
+
+.hero
+    padding: 
+        top: 14em
+        bottom: 8.7em
+    &-title
+        max-width: 50%
+        font-size: 3.2em
+        line-height: 1
+    &-text
+        max-width: 50%
+        margin-top: 2em
+        font-size: 1.2em
+        line-height: 2
+
+.hero-buttons
+    display: flex
+    margin-top: 3em
+    li + li
+        margin-left: 0.7em
+    &-btn
+        min-width: 11.7rem
+        padding: 1.1em 2em
+        font-size: 1.1em
+        &:hover, &:focus 
+            background-color: $accentColor 
+
+.promotion > .container
+    display: flex
+    align-items: center
+
+.promotion
+    &-img
+        margin: -5em 0 3.3em 0
+    &-list
+        &-title 
+            font-size: 1.6em
+            line-height: 1.25
+            color: $mainTitleColor
+        &-text
+            margin-top: 1.7em
+            line-height: 1.6
+            color: $mainSubtitleColor
+    
+.features
+    padding: 5.3em 0 5.7em 0
+    text-align: center
+    &-title
+        font-size: 2em
+        color: $mainTitleColor
+    &-text
+        margin-top: 2em
+        font-size: 1.4em
+        color: $mainSubtitleColor
+    &-list
+        display: flex
+        flex-wrap: wrap
+        margin: 3.3em -0.7em 0 -0.7em
+    &-list > li
+        width: calc(100% / 4)
+        padding: 0.7em
+    &-card
+        padding: 1.8em
+        border: 1px solid
+        border-image: linear-gradient(#dfe3ea, #ffffff 80%) 1
+        &-title
+            margin-top: 2em
+            font-size: 1.2em
+            color: #42474e
+        &-text
+            margin-top: 1em
+            font-size: 0.9em
+            line-height: 1.7
+            color: #898f98
+        &-btn
+            margin-top: 1.7em
+            padding: 0.8em 1.2em
+            min-width: 7em
+            font-size: 0.9em
+            color: #898f98
+            &:hover, &:focus
+                background-color: $accentColor
+                color: #ffffff
+
+.testimonials
+    padding: 4.2em 0 2.7em 0
+    text-align: center
+    &-title
+        font-size: 2em
+        color: $mainTitleColor
+    &-list
+        display: flex
+        justify-content: space-between
+        margin-top: 4em
+        color: #656b74
+        li + li
+            margin-left: 3.7em
+    &-card
+        &-text
+            position: relative
+            padding: 1.4em
+            max-width: 20em
+            font-size: 0.9em
+            line-height: 1.4
+            text-align: left
+            border-radius: 6px
+            filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1))
+            background-color: #ffffff
+        &-text:before
+            position: absolute
+            top: 100%
+            left: 1.8em
+            content: ""
+            border-style: solid
+            border-color: transparent transparent transparent #ffffff
+            border-width: 0 1.2em 1.2em 1.2em
+        &-person
+            display: flex
+            align-items: center
+            margin-top: 1.7em
+        &-container
+            width: 3.3em
+            height: 3.3em
+            border-radius: 50%
+            background-color: #d2dce0
+            overflow: hidden
+            &-img
+                width: 3.3em
+                height: 3.3em 
+        &-profession
+            margin-left: 0.7em
+            font-size: 0.8em
+            color: #6e747c
+        &-name
+            color: #3ba06f
+            &:hover, &:focus 
+               color: $accentColor 
+               text-decoration: underline
+    &-radio 
+        margin-top: 3em
+    &-label
+        display: inline-block
+        width: 1.1em
+        height: 1.1em
+        border: 2px solid $accentColor
+        border-radius: 50%
+        margin-left: 0.2em
+        &:first-child
+           margin-left: 0 
+    &-input
+        display: none
+        &:checked + label
+            background-color: $accentColor
+            
+.trial
+    padding: 5.8em 0 5.3em 0
+    text-align: center
+    &-title
+        font-size: 2.4em
+    &-text
+        margin-top: 2em
+        font-size: 1.4em
+        font-weight: 300
+        color: #95cde0
+    &-btn
+        min-width: 11.7rem
+        margin-top: 2em
+        padding: 1.1em 2em
+        font-size: 1.1em
+        border-color: #ffffff
+        &:hover, &:focus 
+            background-color: #ffffff
+            color: $accentColor
+
+.footer
+    padding-top: 3rem
+    background-color: #3e434a
+    font-size: 0.9em
+    color: #a5abb2
+    &-list
+        display: flex
+        justify-content: space-between
+        padding-bottom: 5.7rem
+        & > li:last-child
+            max-width: 20.5rem
+    &-card
+        display: inline-flex
+        flex-direction: column
+        & > &-link
+            margin-top: 1rem
+        &-title + &-link, &-title + &-text
+            margin-top: 2rem
+        &-link
+            &:hover, &:focus 
+                color: $accentColor
+        &-title
+            font-size: 0.9em
+        &-text
+            line-height: 1.6
+        &-form
+            display: flex
+            align-items: center
+            margin-top: 1.3rem
+            &-input
+                min-width: 13.6rem
+                padding: 0.7rem
+                border: none
+                border-radius: 6px
+                font-size: 0.8em
+            &-input::placeholder
+                color: #cbcbcb
+            &-btn
+                margin-left: 0.7rem
+                padding: 0.7rem 1.1rem
+                background-image: linear-gradient(#565c64, #4a4f57)
+                border: none
+                color: #bbc1c8
+                &:hover, &:focus 
+                    background-image: linear-gradient(#4a4f57, #565c64)
+                    color: #ffffff
+    &-copyright
+        padding: 2.2rem 0 2.5rem 0
+        border-top: 1px solid #a5abb2
+        color: #a5abb2
+
+@import "_media.sass"
