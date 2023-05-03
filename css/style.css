@@ -216,14 +216,17 @@ section:last-child {
 }
 .features-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   margin: 3.3em -0.7em 0 -0.7em;
 }
-.features-list > li {
+.features-list-item {
   width: 25%;
   padding: 0.7em;
 }
 .features-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 1.8em;
   border: 1px solid;
   -o-border-image: linear-gradient(#dfe3ea, #ffffff 80%) 1;
@@ -262,17 +265,16 @@ section:last-child {
 }
 .testimonials-list {
   display: flex;
-  justify-content: space-between;
-  margin-top: 4em;
+  flex-direction: column;
+  margin: 3em -3em 0 -3em;
   color: #656b74;
 }
-.testimonials-list li + li {
-  margin-left: 3.7em;
+.testimonials-list-item {
+  padding: 1em 3em 0 3em;
 }
 .testimonials-card-text {
   position: relative;
   padding: 1.4em;
-  max-width: 20em;
   font-size: 0.9em;
   line-height: 1.4;
   text-align: left;
@@ -317,24 +319,30 @@ section:last-child {
   color: #2095bc;
   text-decoration: underline;
 }
-.testimonials-radio {
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
   margin-top: 3em;
 }
-.testimonials-label {
-  display: inline-block;
-  width: 1.1em;
-  height: 1.1em;
-  border: 2px solid #2095bc;
-  border-radius: 50%;
-  margin-left: 0.2em;
+
+.slick-dots li {
+  margin-left: 0.3rem;
 }
-.testimonials-label:first-child {
+.slick-dots li:first-child {
   margin-left: 0;
 }
-.testimonials-input {
-  display: none;
+
+.slick-dots li button {
+  width: 1.1rem;
+  height: 1.1rem;
+  background-color: transparent;
+  border: 2px solid #2095bc;
+  border-radius: 50%;
+  font-size: 0;
 }
-.testimonials-input:checked + label {
+
+.slick-dots > .slick-active > button {
   background-color: #2095bc;
 }
 
@@ -454,7 +462,7 @@ section:last-child {
     width: 56%;
     margin: -3.3em 0 3.3em 0;
   }
-  .features-list > li {
+  .features-list-item {
     width: 50%;
   }
   .features-card {
@@ -515,9 +523,6 @@ section:last-child {
     width: 47%;
     margin: 0;
   }
-  .testimonials-list > li:last-child {
-    display: none;
-  }
   .footer-list {
     flex-wrap: wrap;
   }
@@ -546,12 +551,6 @@ section:last-child {
     text-align: center;
   }
   .promotion-img {
-    display: none;
-  }
-  .testimonials-list {
-    justify-content: center;
-  }
-  .testimonials-list > li:nth-child(2) {
     display: none;
   }
   .footer-list > li {
@@ -592,7 +591,7 @@ section:last-child {
     margin-left: 0;
     margin-top: 0.7em;
   }
-  .features-list > li {
+  .features-list-item {
     width: 100%;
   }
   .footer-list > li:last-child {

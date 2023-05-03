@@ -128,12 +128,15 @@ section:last-child
         color: $mainSubtitleColor
     &-list
         display: flex
-        flex-wrap: wrap
+        flex-direction: column
         margin: 3.3em -0.7em 0 -0.7em
-    &-list > li
+    &-list-item
         width: calc(100% / 4)
         padding: 0.7em
     &-card
+        display: flex
+        flex-direction: column
+        align-items: center
         padding: 1.8em
         border: 1px solid
         border-image: linear-gradient(#dfe3ea, #ffffff 80%) 1
@@ -155,7 +158,6 @@ section:last-child
             &:hover, &:focus
                 background-color: $accentColor
                 color: #ffffff
-
 .testimonials
     padding: 4.2em 0 2.7em 0
     text-align: center
@@ -164,16 +166,15 @@ section:last-child
         color: $mainTitleColor
     &-list
         display: flex
-        justify-content: space-between
-        margin-top: 4em
+        flex-direction: column
+        margin: 3em -3em  0 -3em
         color: #656b74
-        li + li
-            margin-left: 3.7em
+        &-item
+            padding: 1em 3em 0 3em
     &-card
         &-text
             position: relative
             padding: 1.4em
-            max-width: 20em
             font-size: 0.9em
             line-height: 1.4
             text-align: left
@@ -210,22 +211,47 @@ section:last-child
             &:hover, &:focus 
                color: $accentColor 
                text-decoration: underline
-    &-radio 
-        margin-top: 3em
-    &-label
-        display: inline-block
-        width: 1.1em
-        height: 1.1em
-        border: 2px solid $accentColor
-        border-radius: 50%
-        margin-left: 0.2em
-        &:first-child
-           margin-left: 0 
-    &-input
-        display: none
-        &:checked + label
-            background-color: $accentColor
-            
+    // &-radio 
+    //     margin-top: 3em
+    // &-label
+    //     display: inline-block
+    //     width: 1.1em
+    //     height: 1.1em
+    //     border: 2px solid $accentColor
+    //     border-radius: 50%
+    //     margin-left: 0.2em
+    //     &:first-child
+    //        margin-left: 0 
+    // &-input
+    //     display: none
+    //     &:checked + label
+    //         background-color: $accentColor
+
+// testimonials slick
+
+.slick-dots
+    display: flex
+    justify-content: center
+    margin-top: 3em
+
+.slick-dots li
+    margin-left: 0.3rem
+    &:first-child
+        margin-left: 0
+
+.slick-dots li button
+    width: 1.1rem
+    height: 1.1rem
+    background-color: transparent
+    border: 2px solid $accentColor
+    border-radius: 50%
+    font-size: 0
+
+
+.slick-dots > .slick-active > button
+    background-color: $accentColor
+    
+
 .trial
     padding: 5.8em 0 5.3em 0
     text-align: center
