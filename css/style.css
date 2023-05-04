@@ -439,6 +439,14 @@ section:last-child {
   color: #a5abb2;
 }
 
+.modalTryItFreeNow {
+  display: none;
+}
+
+.fancybox-content {
+  background: #3e434a;
+}
+
 /* 1280 980 767 640 480 */
 @media (max-width: 1280px) {
   .container {

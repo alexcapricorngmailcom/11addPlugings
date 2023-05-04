@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/jquery.fancybox.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
@@ -37,7 +38,7 @@
                 <h1 class="hero-title">Customer service for a connected world.</h1>
                 <p class="hero-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus augue id dapibus ultricies. Morbi venenatis</p>
                 <ul class="hero-buttons">
-                    <li><a href="#" class="hero-buttons-btn btn">Try It Free Now</a></li>
+                    <li><a href="" class="hero-buttons-btn btn" data-fancybox data-src="#modalTryItFreeNow">Try It Free Now</a></li>
                     <li><a href="#" class="hero-buttons-btn btn">Learn More</a></li>
                 </ul>
             </div>
@@ -214,7 +215,7 @@
             <div class="container">
                 <h2 class="trial-title">Lorem ipsum dolor sit amet, consectetur</h2>
                 <p class="trial-text">Nullam laoreet nibh in lectus laoreet, vitae laoreet libero condimentum</p>
-                <a class="trial-btn btn" href="#">Try it Free now</a>
+                <a class="trial-btn btn" href="" data-fancybox data-src="#modalTryItFreeNow">Try it Free now</a>
             </div>
         </section>
     </main>
@@ -270,8 +271,18 @@
         </div>
     </footer>
 
+    <div class="modalTryItFreeNow" id="modalTryItFreeNow">
+        <p class="footer-card-text">Subscribe to our newsletter! Get productivity tips, 
+            product updates and special offers!</p>
+        <form class="footer-card-form" action="">
+            <input class="footer-card-form-input" type="text" name="" id="" placeholder="Your e-mail address">
+            <button class="footer-card-form-btn btn" type="reset">Subscribe</button>
+        </form>
+    </div>
+
     <script type="text/javascript" src="./js/jquery-3.6.4.min.js"></script>
     <script type="text/javascript" src="./js/slick.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.fancybox.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>
