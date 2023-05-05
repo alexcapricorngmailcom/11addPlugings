@@ -60,8 +60,13 @@ $('.features-list').slick({
   ]
 });
 
+// sticky header
 
-
-
-
-
+$(window).scroll(function(){
+  if ($(window).scrollTop() >= 568) {
+    $('.header').addClass('sticky-header');
+  }
+  else if ($(window).scrollTop() <= 38) {
+    $('.header').removeClass('sticky-header');
+  }
+});
