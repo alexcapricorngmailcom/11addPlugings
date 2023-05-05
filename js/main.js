@@ -70,3 +70,26 @@ $(window).scroll(function(){
     $('.header').removeClass('sticky-header');
   }
 });
+
+// scroll
+
+$('[href="#"]').on('click', event => {
+  event.preventDefault();
+  
+  $('html, body').animate({scrollTop: 0}, 500);
+  
+});
+
+$('[href^="#anchor"]').on('click', event => {
+  
+  event.preventDefault();
+  
+  const $link = $(event.currentTarget);
+  const $selector = $link.attr('href');
+  const $target = $($selector);
+  
+  const $distance = $target.offset().top;
+  
+  $('html, body').animate({scrollTop: $distance}, 500);
+
+});
