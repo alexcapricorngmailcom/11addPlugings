@@ -71,7 +71,7 @@ $(window).scroll(function(){
   }
 });
 
-// scroll
+// smooth scroll
 
 $('[href="#"]').on('click', event => {
   event.preventDefault();
