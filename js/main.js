@@ -6,7 +6,7 @@ $('.testimonials-list').slick({
     arrows: false,
     responsive: [
       {
-        breakpoint: 767,
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -92,4 +92,16 @@ $('[href^="#anchor"]').on('click', event => {
   
   $('html, body').animate({scrollTop: $distance}, 500);
 
+});
+
+// nav-mobile-btn
+
+const navList = $('.nav-list');
+
+const navMobileBtn = $('.nav-mobile-btn').on('click', event => {
+  navList.removeClass('nav-list-display');
+});
+
+const navListSpace = navList.on('click', event => {
+  navList.addClass('nav-list-display');
 });
