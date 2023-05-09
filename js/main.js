@@ -13,7 +13,7 @@ $('.testimonials-list').slick({
         }
       },
       {
-        breakpoint: 640,
+        breakpoint: 641,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
@@ -22,42 +22,36 @@ $('.testimonials-list').slick({
     ]
 });
 
-// const slickNumbers = $('li > button');
-// slickNumbers.text('');
-
 $('.features-list').slick({
   infinite: true,
   slidesToShow: 4,
-  slidesToScroll: 4,
+  slidesToScroll: 1,
   arrows: false,
+
   responsive: [
     {
-      breakpoint: 980,
+      breakpoint: 981,
       settings: {
         slidesToShow: 3,
-        slidesToScroll: 1,
         dots: true,
-        infinite: false
       }
     },
     {
-      breakpoint: 767,
+      breakpoint: 768,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 1,
         dots: true,
-        infinite: false
       }
     },
     {
-      breakpoint: 640,
+      breakpoint: 641,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1,
         dots: true,
       }
     }
   ]
+
 });
 
 // sticky header
