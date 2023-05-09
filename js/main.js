@@ -62,12 +62,17 @@ $('.features-list').slick({
 
 // sticky header
 
+const $header = $('.header');
+
 $(window).scroll(function(){
-  if ($(window).scrollTop() >= 568) {
-    $('.header').addClass('sticky-header');
+  const scrollTop = $(window).scrollTop() + 1;
+  const offset = $('.promotion').offset().top
+
+  if (scrollTop + 1 >= offset) {
+    $header.addClass('header-sticky');
   }
-  else if ($(window).scrollTop() <= 38) {
-    $('.header').removeClass('sticky-header');
+  else if (scrollTop <= 30) {
+    $header.removeClass('header-sticky');
   }
 });
 
