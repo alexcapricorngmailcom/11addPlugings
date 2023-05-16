@@ -238,7 +238,8 @@ section:last-child {
   align-items: center;
   padding: 1.8em;
   border: 1px solid;
-  border-image: linear-gradient(#dfe3ea, #ffffff 80%) 1;
+  -o-border-image: linear-gradient(#dfe3ea, #ffffff 80%) 1;
+     border-image: linear-gradient(#dfe3ea, #ffffff 80%) 1;
 }
 .features-card-title {
   margin-top: 2em;
@@ -423,6 +424,9 @@ section:last-child {
   border: none;
   border-radius: 6px;
   font-size: 0.8em;
+}
+.footer-card-form-input::-moz-placeholder {
+  color: #cbcbcb;
 }
 .footer-card-form-input::placeholder {
   color: #cbcbcb;
